@@ -1,0 +1,6 @@
+tarea moral
+después de crear su usuario en github, cree un repositorio en el cual agregue un archivo al cual le haga las siguientes operaciones:
+* agregarle líneas
+* borrarle líneas
+* cambiarle líneas
+después de cada una de estas operaciones, haga el commit y el sync y observe cómo se comporta el repositorio
