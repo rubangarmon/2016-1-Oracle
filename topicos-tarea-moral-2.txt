@@ -1,0 +1,21 @@
+tarea moral
+instale la última versión de virtual box (5.0.12)
+abra el appliance (.ova) para que le cree los archivos de la máquina virtual en SU disco duro
+habilite algún directorio del disco duro para que sea considerado como carpeta compartida
+abra la máquina virtual que acaba de crear
+abra una ventana de terminal
+conéctese con el usuario system a la base de datos
+cree un usuario llamado topicos
+realice las acciones necesarias para que se pueda conectar con él
+cree una tabla llamada x con algún campo del tipo number
+inserte, borre y actualice registros SIN hacer commit
+cree otra tabla llamada z y verifique que los registros previamente insertados se han registrado
+inserte registros en la tabla z y al final haga un rollback
+elimine un registro de la tabla z sin hacer commit
+borre la tabla x y verifique que el registro fue eliminado
+mediante el comando select obtenga los siguientes resultados
+* raiz cuadrada de 6464
+* coseno de 75.93
+* muestre la fecha del sistema
+modifique el siguiente comando para que la fecha se muestre con signos de división (slash) y con el formato año dia mes
+alter session set nls_date_format = 'dd-mm-yyyy hh24:mi:ss';
