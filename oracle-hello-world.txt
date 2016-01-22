@@ -1,0 +1,9 @@
+CREATE OR REPLACE FUNCTION HELLO_WORLD 
+(
+  WHO_ARE_YOU IN VARCHAR2 
+) RETURN VARCHAR2 AS 
+  v_resultado  varchar2 (100);
+BEGIN
+  v_resultado:= 'HELLO WORLD ' || WHO_ARE_YOU;
+  RETURN v_resultado;
+END HELLO_WORLD;
