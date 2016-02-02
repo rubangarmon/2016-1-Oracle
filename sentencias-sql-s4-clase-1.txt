@@ -1,0 +1,50 @@
+select * from employees;
+
+-- si funciona
+update employees 
+set HIRE_DATE = sysdate
+where 
+COMMISSION_PCT is null;
+
+-- no funcionaff
+update employees 
+set COMMISSION_PCT = 1.6 
+where 
+COMMISSION_PCT is null;
+
+
+select department_id,
+count (*) cantidad, 
+avg (salary) salary_avg
+from 
+employees
+--where department_id = 90
+group by department_id
+;
+
+select x.first_name || ' ' || x.last_name manager_name
+, count (y.employee_id) cantidad_empleados
+from employees x, employees y
+where y.manager_id  = x.employee_id
+group by x.first_name || ' ' || x.last_name;
+
+select x.first_name || ' ' || x.last_name manager_name
+, count (y.employee_id) cantidad_empleados
+from employees x INNER JOIN employees y
+      ON y.manager_id  = x.employee_id
+where x.first_name like 'N%'
+group by x.first_name || ' ' || x.last_name;
+
+-- haga una consulta que muestre, por departamento, el salario
+-- mas alto, el mas bajo y la diferencia entre estos dos
+-- ordenado por el salario mas alto
+
+-- haga una consulta que muestre la antigüedad en meses y en 
+-- años (ambos enteros) de los empleados, y sólo muestre 
+-- aquellos empleados que 
+-- tengan una antigüedad superior a los 14 años con 8 meses
+
+-- si no ha visto el video de plural, véalo haciendo énfasis en
+-- las secciones de cursores y excepciones.
+
+
