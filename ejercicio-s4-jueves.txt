@@ -1,0 +1,5 @@
+haga un procedimiento de base de datos que reciba un código de departamento y asigne a un parámetro de salida TODOS los nombres de los empleados de ese departamento separados por el caracter guión (-).
+
+
+haga un procedimiento de base de datos que reciba un número de años y un string de resultado con los nombres de TODOS los oe.customers cuya edad sea mayor o igual a ese parámetro.  Los nombres van separados por el caracter guión (-).
+podría suceder que no tenga los permisos necesarios.  en este caso, cree el sinónimo público y ejecute el grant con el permiso de references.

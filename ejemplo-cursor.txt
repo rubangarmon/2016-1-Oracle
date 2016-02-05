@@ -1,0 +1,23 @@
+create or replace PROCEDURE OBTENER_NOMBRES_EMPLEADOS 
+(
+  P_COD_DEPARTAMENTO IN NUMBER 
+, P_LISTADO_NOMBRES OUT VARCHAR2 
+) AS 
+  cursor c_empleados IS 
+      select e.FIRST_NAME from employees e
+      WHERE e.DEPARTMENT_ID = P_COD_DEPARTAMENTO;
+
+  cursor c_empleados_v2 (p_cod_depto NUMBER) IS 
+      select e.FIRST_NAME from employees e
+      WHERE e.DEPARTMENT_ID = P_COD_DEPTO;
+BEGIN
+    P_LISTADO_NOMBRES := '';
+    FOR employee_rec IN c_empleados
+    LOOP
+      if c_empleados%rowcount > 1 THEN
+          p_listado_nombres := p_listado_nombres || '-';
+      END IF;
+      P_LISTADO_NOMBRES := P_LISTADO_NOMBRES || 
+         employee_rec.first_name;
+    END LOOP;
+END OBTENER_NOMBRES_EMPLEADOS;
