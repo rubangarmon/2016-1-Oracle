@@ -1,0 +1,34 @@
+--select * from employees where manager_id is null;
+
+-- no data found exception
+declare
+  x employees.FIRST_NAME%type;
+  n number (10);
+begin
+  n:= 1039;
+  select e.first_name 
+  into x from employees e
+  where e.employee_id = n;
+  dbms_output.put_line ('Employee Name=' || x);
+exception
+  when no_data_found then
+    dbms_output.put_line ('Employee ID=' || n || ' not found.'); 
+end;
+
+
+
+-- too_many_rows exception
+declare
+  x employees.FIRST_NAME%type;
+  n number (10);
+begin
+  n:= 90;
+  select e.first_name 
+  into x from employees e
+  where e.department_id = n;
+  dbms_output.put_line ('Employee Name=' || x);
+exception
+  when too_many_rows then
+    dbms_output.put_line ('Department ID=' || n || 
+                          ' found too many rows.'); 
+end;
