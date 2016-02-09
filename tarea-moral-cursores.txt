@@ -1,0 +1,3 @@
+haga un procedimiento que llene una tabla cuya estructura sea la siguiente:
+id del jefe - nombre del jefe - id del empleado - nombre del empleado
+para insertarle los datos, utilice dos cursores anidados, de modo que el externo procese los jefes y el interno los empleados
