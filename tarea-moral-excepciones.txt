@@ -1,0 +1,3 @@
+tarea moral
+modifique el procedimiento de OBTENER_NOMBRES_EMPLEADOS para que se ajuste a la siguiente condición:
+* cuando se haya desbordado el string de salida, que asigne "puntos suspensivos" (...) en los tres últimos caracteres del string de salida y finalice la ejecución de manera exitosa.
