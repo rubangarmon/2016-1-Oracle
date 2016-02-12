@@ -2,3 +2,5 @@ en caso de que no tenga una tabla llamada y sobre el esquema tópicos, créela c
 
 cree un trigger asociado a la tabla y para que se comporte de la siguiente manera:
 1.  cuando se inserta un registro, si el campo x viene con un valor diferente de nulo, se multiplica por la cantidad de horas que tiene la fecha del sistema; si viene en nulo, entonces toma el valor de la secuencia definida para estos efectos.  NO SE PREOCUPE POR LOS DUPLICADOS.
+2.  cuando se modifica la columna w se asigna a la columna x el largo de la columna w y la columna w se convierte a mayúscula.
+3.  cuando se borra alguna fila de la taba y, el valor de la columna x se guarda en una tabla que usted creará (bck_x) la cual incluya la fecha y hora del sistema en que el registro fue borrado, siempre y cuando el valor de x sea NO nulo.

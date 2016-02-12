@@ -1,0 +1,17 @@
+create or replace TRIGGER TRG_AJUSTAR_VALOR_X 
+BEFORE INSERT ON Y 
+FOR EACH ROW
+DECLARE
+  horas_sistema number (2);
+BEGIN
+  IF :NEW.X IS NOT NULL THEN
+    horas_sistema := TO_NUMBER (TO_CHAR (SYSDATE, 'hh24'));
+    :NEW.X:= :NEW.X * horas_sistema;
+  ELSE
+    SELECT 
+      SEQ_NUM_FACTURA.nextval
+    INTO
+      :new.x
+    FROM DUAL;    
+  END IF;
+END;
