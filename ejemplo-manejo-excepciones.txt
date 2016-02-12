@@ -32,3 +32,52 @@ exception
     dbms_output.put_line ('Department ID=' || n || 
                           ' found too many rows.'); 
 end;
+
+-- value_error exception
+declare
+  x employees.FIRST_NAME%type;
+  n number (10);
+begin
+  n:= 103;
+  select e.first_name || ' ' || e.first_name || ' ' || e.last_name 
+  into x from employees e
+  where e.employee_id = n;
+  dbms_output.put_line ('Employee Name=' || x);
+exception
+  when value_error then
+    dbms_output.put_line ('Employee Number =' || n || 
+                          ' raised value error.'); 
+end;
+
+-- dup_val_on_index exception
+declare
+ n number (10);
+begin
+  n:= 103;
+  insert into employees 
+  select *
+  from employees e
+  where e.employee_id = n;
+  dbms_output.put_line ('Employee number =' || n || ' inserted succesfully.');
+exception
+  when dup_val_on_index then
+    dbms_output.put_line ('Employee Number =' || n || 
+                          ' raised dup_val_on_index exception.'); 
+end;
+
+
+-- custom exceptions
+declare
+  negative exception;
+  n number (5);
+begin
+  n:= 5;
+  if n < 0 then
+    raise negative;
+  end if;
+  dbms_output.put_line ('Number = ' || n ); 
+exception
+  when negative then
+    dbms_output.put_line ('Number = ' || n || 
+                          ' raised negative exception.'); 
+end;

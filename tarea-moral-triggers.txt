@@ -1,0 +1,4 @@
+en caso de que no tenga una tabla llamada y sobre el esquema tópicos, créela con una columna llamada x del tipo number (5).  en caso de que ya exista la tabla llamada y, modifíquela para que incluya una columna llamada x del tipo number (5).
+
+cree un trigger asociado a la tabla y para que se comporte de la siguiente manera:
+1.  cuando se inserta un registro, si el campo x viene con un valor diferente de nulo, se multiplica por la cantidad de horas que tiene la fecha del sistema; si viene en nulo, entonces toma el valor de la secuencia definida para estos efectos.  NO SE PREOCUPE POR LOS DUPLICADOS.
