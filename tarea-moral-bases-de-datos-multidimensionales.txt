@@ -1,0 +1,4 @@
+tarea moral
+observe el modelo de base de datos multidimensional que se encuentra en el url http://3.bp.blogspot.com/_Ie3CcFPLmus/TGUqKddmA1I/AAAAAAAAAFA/QWiC3-jzKu8/s1600/SH-schema.jpg
+
+analícelo y entiéndalo para que en la próxima clase pueda participar activamente en la creación de los primeros elementos de un cubo en oracle.
